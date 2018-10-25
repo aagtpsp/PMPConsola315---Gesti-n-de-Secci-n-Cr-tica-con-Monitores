@@ -21,9 +21,9 @@ public class PMPConsola315 {
         m.incrementar(7);
         m.incrementar(5);
         m.incrementar(3);
-        System.out.println(m);
-        m.decrementar(2);
-        System.out.println(m);
+        m.mostrar();
+        m.decrementar(32);
+        m.mostrar();
     }
     
 }
