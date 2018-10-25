@@ -18,11 +18,11 @@ public class PMPConsola315 {
         // TODO code application logic here
         Monitor m = new Monitor();
         
-        m.anadir(7);
-        m.anadir(5);
-        m.anadir(3);
+        m.incrementar(7);
+        m.incrementar(5);
+        m.incrementar(3);
         System.out.println(m);
-        m.sacar();
+        m.decrementar(2);
         System.out.println(m);
     }
     

@@ -5,38 +5,47 @@
  */
 package pmpconsola315;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author ifhprof01
  */
 public class Monitor {
-    private ArrayList lista;
-
+    private int[] lista;
+    
     public Monitor() {
-        this.lista = new ArrayList();
+        lista = new int[10];
+        for (int i = 0; i<10; i++) lista[i] = 0;
     }
     
-    public Monitor(ArrayList lista) {
-        this.lista = lista;
+   
+    /**
+     * Incrementa todas las posiciones del vector con un mismo valor
+     * @param valor Valor con el que incrementar todas las posiciones del vector
+    */
+    public void incrementar(int valor) {
+        for (int i = 0; i<10; i++) {
+            lista[i] = lista[i] + valor;
+        }
     }
     
-    public void anadir(Object o) {
-        lista.add(o);
+    /**
+     * Decrementa todas las posiciones del vector con un mismo valor
+     * @param valor Valor con el que decrementar todas las posiciones del vector
+    */
+    public void decrementar(int valor) {
+        for (int i = 0; i<10; i++) {
+            lista[i] = lista[i] - valor;
+        }
     }
     
-    public void sacar() {
-        lista.remove(lista.size() - 1);
+    /**
+     * Muestra todas las posiciones del vector
+    */
+    public void mostrar() {
+        for (int i = 0; i<10; i++) System.out.print(lista[i] + "-");
+        // Probar con esta sentencia para comprobar que no siempre se incrementa
+        // y decrementa hilo a hilo
+        // for (int i = 0; i<10; i++) if (lista[i] > 9) System.out.print(lista[i] + "-");
+        System.out.println("Fin");
     }
-
-    public ArrayList getLista() {
-        return lista;
-    }
-
-    @Override
-    public String toString() {
-        return "Monitor{" + "lista=" + lista + '}';
-    }
-    
 }
